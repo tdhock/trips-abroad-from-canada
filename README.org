@@ -22,6 +22,6 @@ table of days, and the table of trips.
 - and before the day a trip ends (date<returned), 
 - then the weight of that day should be zero.
 
-The output of the script is an output such as: 1096.5 days in Canada
-between 2024-05-30 and 2028-03-01 whereas min number required for
-citizenship is 1095.
+The output of the script is a [[file:days.csv]] file for auditing, and a
+summary message such as: 1096.5 days in Canada between 2024-05-30 and
+2028-03-01 whereas min number required for citizenship is 1095.
