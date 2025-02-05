@@ -1,0 +1,27 @@
+Canada physical presence calculator
+
+https://eservices.cic.gc.ca/rescalc/resCalcStartNew.do?&lang=en
+explains how to determine if you meet the physical presence
+requirements for citizenship in Canada.
+
+[[file:trips.csv]] has one line per trip outside of Canada.
+
+[[file:trips.R]] uses R data.table IDate and non-equi join to compute a
+table with one row per day, and a weight column which determines how
+much that day is counted.
+
+- 0.5 for each day before permanent residence, in the year prior to
+  obtaining permanent residence.
+- 1 for each day you were physically present in Canada.
+- 0 for each day with no physical presence in Canada.
+
+We can implement these rules by doing a non-equi join between the
+table of days, and the table of trips.
+
+- if a day is after the day a trip starts (date>departed), 
+- and before the day a trip ends (date<returned), 
+- then the weight of that day should be zero.
+
+The output of the script is an output such as: 1096.5 days in Canada
+between 2024-05-30 and 2028-03-01 whereas min number required for
+citizenship is 1095.
