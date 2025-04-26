@@ -4,9 +4,12 @@ https://eservices.cic.gc.ca/rescalc/resCalcStartNew.do?&lang=en
 explains how to determine if you meet the physical presence
 requirements for citizenship in Canada.
 
-[[file:trips.csv]] has one line per trip outside of Canada.
+User interface: edit
+[[file:trips.csv]],
+which has one line per trip outside of Canada.
 
-[[file:trips.R]] uses R data.table IDate and non-equi join to compute a
+Then run code in
+[[file:trips.R]], which uses R data.table IDate and non-equi join to compute a
 table with one row per day, and a weight column which determines how
 much that day is counted.
 

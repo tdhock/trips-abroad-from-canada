@@ -8,7 +8,7 @@ orig.enter <- as.IDate("2024-05-30")
 ## permanent resident counts as one day;
 became.pr <- as.IDate("2025-01-08")
 app.date <- as.IDate(Sys.time())
-app.date <- as.IDate("2028-03-01")
+app.date <- as.IDate("2028-04-01")
 
 day.dt <- data.table(
   date=seq(orig.enter, app.date, by="day"),
