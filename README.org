@@ -7,6 +7,8 @@ requirements for citizenship in Canada.
 User interface: edit
 [[file:trips.csv]],
 which has one line per trip outside of Canada.
+Start and end should be days leaving and returning to Canada
+(some part of the day in Canada).
 
 Then run code in
 [[file:trips.R]], which uses R data.table IDate and non-equi join to compute a
@@ -26,5 +28,6 @@ table of days, and the table of trips.
 - then the weight of that day should be zero.
 
 The output of the script is a [[file:days.csv]] file for auditing, and a
-summary message such as: 1096.5 days in Canada between 2024-05-30 and
-2028-03-01 whereas min number required for citizenship is 1095.
+summary message, last such message was:
+
+On 2026-08-20 I calculate 1103.5 days in Canada between 2024-05-30 and 2028-04-01 whereas min number required for citizenship is 1095

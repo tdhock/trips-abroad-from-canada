@@ -29,6 +29,9 @@ fwrite(day.dt,"days.csv")
 ## during the 5 years right before the date you applied
 min.days <- 1095
 day.dt[, cat(
+  "On",
+  format(Sys.Date()),
+  "I calculate",
   sum(weight),
   "days in Canada between",
   format(date[1]),
